@@ -1,2 +1,2 @@
 #!/bin/bash
-useradd -D vincent:staff *
+chown -R vincent:staff *
