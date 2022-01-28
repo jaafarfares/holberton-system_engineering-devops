@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo useradd -m -d vincent staff
+useradd - -d vincent:staff
