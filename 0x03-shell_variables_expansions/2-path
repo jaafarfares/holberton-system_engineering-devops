@@ -1,2 +1,2 @@
 #!/bin/bash
-root@LAPTOP-6P2UP13D:~/holberton-system_engineering-devops/0x03-shell_variables_expansions/action
+echo "$PATH:/action"
