@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#read the file content
+filename='/etc/passwd'
+while IFS=: read -r f1
+do
+echo "$f1"
+done < $filename
