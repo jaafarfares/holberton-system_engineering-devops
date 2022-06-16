@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#check the file if it exists / empty / regular file
 if [ -e "school" ]
 then
     echo "school file exists"
