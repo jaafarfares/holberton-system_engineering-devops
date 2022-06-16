@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#this file print Best School 10 times
+for a in {1..10}
+do
+   echo "Best School"
+   a=$(( a + 1 ))
+done

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#display the time
+hours=0
+while [[ $hours -le 12 ]]
+do
+    munites=0
+    echo "Hour: $hours"
+    hours=$(( hours+1 ))
+    while [[ $munites -le 58 ]]
+    do
+        munites=$((munites+1))
+        echo $munites
+done
+done
