@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #print to stdout and using sleep call
 va="To infinity and beyond"
-for va in {1..5}
+while true
 do
     echo "$va"
     sleep 2
