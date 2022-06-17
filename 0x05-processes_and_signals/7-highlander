@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#print to stdout and using sleep call
+va="To infinity and beyond"
+while true
+do
+    echo "$va"
+    sleep 2
+    trap "I am invincible!!!" SIGTERM
+done
