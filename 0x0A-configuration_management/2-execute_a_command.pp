@@ -1,5 +1,6 @@
 # kill a process you must use pkill and exec
 
-exec { 'killmenow':
-  command => 'pkill -f killmenow'
+exec { 'kill-proc'
+  command => 'pkill -f killmenow',
+  path => '/usr/bin/'
 }
