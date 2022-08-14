@@ -1,4 +1,4 @@
-i# connect to a server without typing a password using puppet
+# connect to a server without typing a password using puppet
 file_line { 'ssh_config':
     ensure   => present,
     path     => '/etc/ssh/ssh_config',
