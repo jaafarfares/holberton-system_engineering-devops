@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#cretaes an rsa private key named scholl with length 4096
+
+ssh-keygen -b 2048 -t rsa -N betty
