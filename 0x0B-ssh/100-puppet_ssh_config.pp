@@ -9,7 +9,7 @@ file_line { 'ssh_config':
 ssh_connect { 'ssh_config1':
     ensure   => present,
     path     => '/etc/ssh/ssh_config',
-    line     => 'IdentityFile ~/.ssh/school',
+    line     => "IdentityFile ~/.ssh/school",
     match  => 'IdentityFile ~/.ssh/school',
     multiple => 'true'
 }
