@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# connect to the web serverusing the private key
+
+if [[ $# -lt 3 ]]
+then echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+else
+    scp -i "$4" -o "$1" "$3"@"$2":~/ StrictHostKeyChecking=no
+fi
+
+
+
