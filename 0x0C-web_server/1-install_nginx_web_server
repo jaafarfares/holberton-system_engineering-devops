@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # install nginx in my web server and output a message
-
 sudo apt-get update
 sudo apt-get -y install nginx
-sudo service nginx status
-sudo curl 34.207.251.253
 sudo ufw app list
 sudo ufw enable
 sudo ufw allow 'Nginx HTTPS'
