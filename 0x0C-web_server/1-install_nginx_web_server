@@ -3,9 +3,6 @@
 sudo apt-get update -y
 sudo apt-get -y install nginx
 sudo service nginx status
-sudo curl 34.207.251.253
 echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html
 sudo service nginx restart
-sudo curl 34.207.251.253
-curl -sI 34.198.248.145/
 
