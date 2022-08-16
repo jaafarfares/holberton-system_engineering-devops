@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # install nginx in my web server and output a message
-sudo apt-get update
+sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw app list
 sudo ufw enable
