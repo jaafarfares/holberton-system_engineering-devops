@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# install nginx in my web server and output a message
+sudo apt-get update -y
+sudo apt-get -y install nginx
+sudo apt-get install -y nginx
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html
+line="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "26i $line" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+sudo service nginx reload
