@@ -2,4 +2,4 @@
 #debug the nginx configuration to curl port 80
 sudo ln -s /etc/nginx/sites-available/default
 sudo service nginx reload
-sudo /etc/init.d/nginx stop
+sudo rm -rf /var/run/nginx.pid
