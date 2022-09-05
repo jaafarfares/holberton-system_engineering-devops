@@ -1,2 +1,13 @@
-sudo apt install firewalld
-sudo firewall-cmd --add-forward-port=port=8080:proto=tcp:toport=80
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: dhcpv6-client ssh
+  ports:
+  protocols:
+  masquerade: no
+  forward-ports: port=8080:proto=tcp:toport=80:toaddr=
+  source-ports:
+  icmp-blocks:
+  rich rules:
