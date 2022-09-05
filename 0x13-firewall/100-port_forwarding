@@ -1,0 +1,2 @@
+sudo apt install firewalld
+sudo firewall-cmd --add-forward-port=port=8080:proto=tcp:toport=80
