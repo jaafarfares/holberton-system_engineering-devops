@@ -3,7 +3,7 @@
 
 if [ "$#" -eq 1 ]
 then
-    whoami "$1"
+    echo $whoami "$1"
 else
     whoami
 fi
