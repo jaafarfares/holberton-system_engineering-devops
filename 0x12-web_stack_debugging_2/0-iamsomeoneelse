@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# this is a comment
+
+if [ "$#" -eq 0 ]
+then
+    whoami
+else
+    echo $whoami $1; 
+fi
