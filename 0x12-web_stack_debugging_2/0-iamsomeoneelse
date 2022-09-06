@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # this is a comment
 
-if [ "$#" -eq 0 ]
+if [ "$#" -eq 1 ]
 then
-    whoami
+    whoami "$1"
 else
-    echo $whoami $1; 
+    whoami
 fi
