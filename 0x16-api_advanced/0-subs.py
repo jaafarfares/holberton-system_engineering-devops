@@ -15,5 +15,6 @@ def number_of_subscribers(subreddit):
     data = data.json()
     return data["data"]["subscribers"]
 
+
 if __name__ == '__main___':
     number_of_subscribers(subreedit)
