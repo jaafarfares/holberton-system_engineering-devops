@@ -20,3 +20,6 @@ def recurse(subreddit, hot_list=[]):
     d = data.json()
     for post in d.get("data").get("children"):
         print(post.get("data").get("title"))
+
+if __name__ == '__main___':
+    recurse(subreddit, hot_list=[])
