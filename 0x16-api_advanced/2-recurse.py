@@ -22,6 +22,3 @@ def recurse(subreddit, list=[], after=''):
     if after is not None:
         recurse(subreddit, list, after=after)
     return(list)
-
-if __name__ == '__main___':
-    recurse(subreddit, list=[])
