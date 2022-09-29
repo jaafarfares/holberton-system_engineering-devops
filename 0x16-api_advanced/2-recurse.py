@@ -5,9 +5,9 @@ a given subreddit"""
 import requests
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, list=[], after=''):
     """
-        ......
+        return the list of all hot articles
     """
 
     data = requests.get("https://www.reddit.com/r/"
@@ -15,11 +15,14 @@ def recurse(subreddit, hot_list=[]):
                         .format(subreddit),
                         headers={"User-Agent": "example"},
                         allow_redirects=False)
-    if data.status_code == 404:
+    if data.status_code != 200:
         return None
-    d = data.json()
-    for post in d.get("data").get("children"):
-        print(post.get("data").get("title"))
+    for i in response.json().get("data").get("children"):
+        list.append(item.get("data").get("title"))
+    after = response.json().get("data").get("after")
+    if after is not None:
+        recurse(subreddit, list, after=after)
+    return(list)
 
 if __name__ == '__main___':
-    recurse(subreddit, hot_list=[])
+    recurse(subreddit, list=[])
