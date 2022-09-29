@@ -10,16 +10,15 @@ def recurse(subreddit, list=[], after=''):
         return the list of all hot articles
     """
 
-    data = requests.get("https://www.reddit.com/r/"
-                        "{}/hot.json?limit=100&after={}"
+    data = requests.get("https://www.reddit.com/r/{}/hot.json"
                         .format(subreddit),
                         headers={"User-Agent": "example"},
                         allow_redirects=False)
     if data.status_code != 200:
         return None
-    for i in response.json().get("data").get("children"):
-        list.append(item.get("data").get("title"))
-    after = response.json().get("data").get("after")
+    for i in data.json().get("data").get("children"):
+        list.append(i.get("data").get("title"))
+    after = data.json().get("data").get("after")
     if after is not None:
         recurse(subreddit, list, after=after)
     return(list)
