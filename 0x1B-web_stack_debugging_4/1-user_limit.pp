@@ -2,10 +2,10 @@
 
 exec { 'hard':
   command => 'sed -i "/holberton hard/s/5/20000/" /etc/security/limits.conf',
-  path    => '/home/'
+  path    => '/usr/local/bin/:/bin/'
 }
 
 exec { 'soft':
   command => 'sed -i "/holberton soft/s/4/20000/" /etc/security/limits.conf',
-  path    => '/home/'
+  path    => '/usr/local/bin/:/bin/'
 }
